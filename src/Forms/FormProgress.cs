@@ -1039,16 +1039,18 @@ namespace NVGE
             if (Common.ConvMultiFlag == 0)
             {
                 FileInfo file = new(Common.GetShortPath(Common.ImageFile[0]));
+                //XXX - FileInfo.Extension returns extension of FullName(NOT ShortPath!)
+                string fileExtension = Path.GetExtension(file.Name);
 
                 lst.Add(file.Name);
-                lst2.Add(file.Extension);
+                lst2.Add(fileExtension);
                 Common.ImageFileName = lst.ToArray();
                 Common.ImageFileExt = lst2.ToArray();
 
-                string dest1 = Regex.Replace(file.Name, file.Extension, ".w2xnvg", RegexOptions.IgnoreCase);
-                string dest2 = Regex.Replace(file.Name, file.Extension, ".png", RegexOptions.IgnoreCase);
+                string dest1 = Regex.Replace(file.Name, fileExtension, ".w2xnvg", RegexOptions.IgnoreCase);
+                string dest2 = Regex.Replace(file.Name, fileExtension, ".png", RegexOptions.IgnoreCase);
 
-                switch (file.Extension.ToUpper())
+                switch (fileExtension.ToUpper())
                 {
                     case ".GIF":
                         if (ImageConvert.IMAGEtoPNG(file.Directory + @"\" + file.Name, file.Directory + @"\" + dest1) != false)
@@ -1101,14 +1103,15 @@ namespace NVGE
                 foreach (var sources in Common.ImageFile)
                 {
                     FileInfo file = new(Common.GetShortPath(sources));
+                    string fileExtension = Path.GetExtension(file.Name);
 
                     lst.Add(file.Name);
-                    lst2.Add(file.Extension);
+                    lst2.Add(fileExtension);
 
-                    string dest1 = Regex.Replace(file.Name, file.Extension, ".w2xnvg", RegexOptions.IgnoreCase);
-                    string dest2 = Regex.Replace(file.Name, file.Extension, ".png", RegexOptions.IgnoreCase);
+                    string dest1 = Regex.Replace(file.Name, fileExtension, ".w2xnvg", RegexOptions.IgnoreCase);
+                    string dest2 = Regex.Replace(file.Name, fileExtension, ".png", RegexOptions.IgnoreCase);
 
-                    switch (file.Extension.ToUpper())
+                    switch (fileExtension.ToUpper())
                     {
                         case ".GIF":
                             if (ImageConvert.IMAGEtoPNG(file.Directory + @"\" + file.Name, file.Directory + @"\" + dest1) != false)
