@@ -519,7 +519,7 @@ namespace NVGE
                     Common.ProgMin = 0;
                     Common.ProgMax = Common.ImageFile.Length;
 
-                    using FormProgress Form1 = new(7);
+                    using FormProgress Form1 = new(7);  // Convert
                     Form1.ShowDialog();
 
                     Directory.CreateDirectory(Directory.GetCurrentDirectory() + @"\_temp-project\images\2x");
@@ -597,7 +597,7 @@ namespace NVGE
 
                                 switch (scl)
                                 {
-                                    case 4: // x8
+                                    case 4: // x9
                                     case 5: // x16
                                     case 6: // x32
                                         {
@@ -651,10 +651,10 @@ namespace NVGE
 
                                 switch (scl)
                                 {
-                                    case 1: // x8
-                                    case 2: // x12
+                                    //case 1: // x8
+                                    //case 2: // x12
                                     case 3: // x16
-                                    case 4: // x32
+                                    //case 4: // x32
                                         {
                                             // オリジナルのコンバートファイルをバックアップ
                                             string imagePath = Directory.GetCurrentDirectory() + @"\_temp-project\images\";
@@ -664,7 +664,7 @@ namespace NVGE
                                             }
                                             catch (FileNotFoundException) { }
 
-                                            for (int i = 0; i <= scl; ++i)
+                                            for (int i = 2; i < scl; ++i)
                                             {
                                                 if (Common.AbortFlag != 0)
                                                 {
@@ -765,6 +765,8 @@ namespace NVGE
 
                     Common.stopwatch.Stop();
                     Common.timeSpan = Common.stopwatch.Elapsed;
+
+                    System.Media.SystemSounds.Beep.Play();
 
                     switch (bool.Parse(Config.Entry["UpScaleDetail"].Value))
                     {
@@ -938,7 +940,7 @@ namespace NVGE
                     Common.ProgMin = 0;
                     Common.ProgMax = Common.ImageFile.Length;
 
-                    using FormProgress Form1 = new(7);
+                    using FormProgress Form1 = new(7);  // Convert
                     Form1.ShowDialog();
 
                     Directory.CreateDirectory(Directory.GetCurrentDirectory() + @"\_temp-project\images\2x");
@@ -1020,7 +1022,7 @@ namespace NVGE
 
                                 switch (scl)
                                 {
-                                    case 4: // x8
+                                    case 4: // x9
                                     case 5: // x16
                                     case 6: // x32
                                         {
@@ -1079,10 +1081,10 @@ namespace NVGE
 
                                 switch (scl)
                                 {
-                                    case 1: // x8
-                                    case 2: // x12
+                                    //case 1: // x8
+                                    //case 2: // x12
                                     case 3: // x16
-                                    case 4: // x32
+                                    //case 4: // x32
                                         {
                                             // オリジナルのコンバートファイルをバックアップ
                                             string imagePath = Directory.GetCurrentDirectory() + @"\_temp-project\images\";
@@ -1093,7 +1095,7 @@ namespace NVGE
                                             catch (FileNotFoundException) { }
                                             Directory.CreateDirectory(imagePath + "sources");
 
-                                            for (int i = 0; i < scl; ++i)
+                                            for (int i = 2; i < scl; ++i)
                                             {
                                                 if (Common.AbortFlag != 0)
                                                 {
@@ -1198,6 +1200,8 @@ namespace NVGE
 
                     Common.stopwatch.Stop();
                     Common.timeSpan = Common.stopwatch.Elapsed;
+
+                    System.Media.SystemSounds.Beep.Play();
 
                     switch (bool.Parse(Config.Entry["UpScaleDetail"].Value))
                     {
@@ -1679,7 +1683,7 @@ namespace NVGE
                                 Common.DeleteDirectoryFiles(Common.DeletePathAudio);
                                 return;
                             }
-
+                            //XXX - 音声無しmp4ファイルがエラーになる
                             if (!File.Exists(alpath) && Common.GIFflag != true)
                             {
                                 MessageBox.Show(Strings.AudioNot, Strings.MSGError, MessageBoxButtons.OK, MessageBoxIcon.Error);
