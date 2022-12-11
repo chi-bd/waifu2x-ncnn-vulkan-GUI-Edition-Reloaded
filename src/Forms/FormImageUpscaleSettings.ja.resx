@@ -111,7 +111,7 @@
   <data name="comboBox_GPU.ToolTip" xml:space="preserve">
     <value>変換時に使用するGPUを指定します。
 '自動'を指定すると、変換時に自動的に使用するGPUを決定します。
-'iGPU'を指定すると、CPU内臓グラフィックで変換を行います。
+'iGPU'を指定すると、CPU内蔵グラフィックで変換を行います。
 (内蔵グラフィック機能が存在しないCPUではiGPUは指定できません)
 マルチGPU環境の場合は'dGPU'のいづれかを指定することも可能です。</value>
   </data>

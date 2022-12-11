@@ -321,7 +321,7 @@
     <value>134, 19</value>
   </data>
   <data name="checkBox_EIA.Text" xml:space="preserve">
-    <value>内臓AACを有効にする</value>
+    <value>内蔵AACを有効にする</value>
   </data>
   <data name="checkBox_OOF.Location" type="System.Drawing.Point, System.Drawing">
     <value>451, 48</value>
