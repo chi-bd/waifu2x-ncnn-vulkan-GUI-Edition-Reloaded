@@ -889,20 +889,22 @@ namespace NVGE
             {
                 if (textBox_FPS.Text == "")
                 {
-                    MessageBox.Show("The FPS has not been specified correctly.", Strings.MSGError, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    checkBox_Advanced.Checked = false;
+                    MessageBox.Show(Strings.ErrorFPS, Strings.MSGError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 else if (textBox_FPS.TextLength <= 4)
                 {
-                    MessageBox.Show("The FPS has not been specified correctly.", Strings.MSGError, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    checkBox_Advanced.Checked = false;
+                    MessageBox.Show(Strings.ErrorFPSChar, Strings.MSGError, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (textBox_FPS.Text.Contains('.') != true)
+                {
+                    MessageBox.Show(Strings.ErrorFPSDot, Strings.MSGError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (textBox_FFmpeg.Text == "")
                 {
-                    MessageBox.Show("The location of FFmpeg is not specified.", Strings.MSGError, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    checkBox_Advanced.Checked = false;
+                    MessageBox.Show(Strings.ErrorFFmpegPath, Strings.MSGError, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 

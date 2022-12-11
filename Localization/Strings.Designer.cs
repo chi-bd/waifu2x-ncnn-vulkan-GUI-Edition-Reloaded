@@ -325,7 +325,7 @@ namespace NVGE.Localization {
         
         /// <summary>
         ///   Some fields are not entered correctly.
-        ///&apos;FPS for upscaled video&apos; field must be at least 4 characters. に類似しているローカライズされた文字列を検索します。
+        ///&apos;FPS for upscaled video&apos; field must be at least 5 characters. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ErrorFPSChar {
             get {

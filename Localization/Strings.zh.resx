@@ -219,7 +219,7 @@ GPU块大小 "的值必须至少是1个字符。</value>
   </data>
   <data name="ErrorFPSChar" xml:space="preserve">
     <value>有些字段没有正确输入。
-'FPS for upscaled video'字段必须至少有4个字符长。</value>
+'升频视频的'字段必须至少有5个字符长。</value>
   </data>
   <data name="ErrorFPSDot" xml:space="preserve">
     <value>有些字段没有正确输入。

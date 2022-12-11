@@ -220,7 +220,7 @@ Example: 60fps &gt; 60.00, 29.97fps &gt; 29.97</value>
   </data>
   <data name="ErrorFPSChar" xml:space="preserve">
     <value>Some fields are not entered correctly.
-'FPS for upscaled video' field must be at least 4 characters.</value>
+'FPS for upscaled video' field must be at least 5 characters.</value>
   </data>
   <data name="ErrorFPSDot" xml:space="preserve">
     <value>Some fields are not entered correctly.

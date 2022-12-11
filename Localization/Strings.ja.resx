@@ -219,7 +219,7 @@ Nose: アップスケール倍率は'2倍'のみ指定できます。ノイズ�
   </data>
   <data name="ErrorFPSChar" xml:space="preserve">
     <value>入力が正しくないフィールドがあります。
-'アップスケール動画のFPS'項目は4文字以上である必要があります。</value>
+'アップスケール動画のFPS'項目は5文字以上である必要があります。</value>
   </data>
   <data name="ErrorFPSDot" xml:space="preserve">
     <value>入力が正しくないフィールドがあります。
