@@ -125,6 +125,17 @@ namespace NVGE.Localization {
         }
         
         /// <summary>
+        ///   Activating advanced setting items may interfere with upscaling.
+        ///It is recommended that only advanced users use them.
+        ///Do you really want to enable it? に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ConfirmActivatingAdvancedSetting {
+            get {
+                return ResourceManager.GetString("ConfirmActivatingAdvancedSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   There is currently an upscaled frame file.
         ///If you exit the application at this point, all upscaled
         ///file will be lost. Are you sure you want to exit? に類似しているローカライズされた文字列を検索します。

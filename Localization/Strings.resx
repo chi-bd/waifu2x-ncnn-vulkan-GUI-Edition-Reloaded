@@ -139,6 +139,11 @@ If you have enabled advanced settings, please check your settings.</value>
   <data name="ButtonUpscaleVideo" xml:space="preserve">
     <value>Upscaling Video</value>
   </data>
+  <data name="ConfirmActivatingAdvancedSetting" xml:space="preserve">
+    <value>Activating advanced setting items may interfere with upscaling.
+It is recommended that only advanced users use them.
+Do you really want to enable it?</value>
+  </data>
   <data name="ConfirmClose" xml:space="preserve">
     <value>There is currently an upscaled frame file.
 If you exit the application at this point, all upscaled

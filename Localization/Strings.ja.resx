@@ -139,6 +139,11 @@
   <data name="ButtonUpscaleVideo" xml:space="preserve">
     <value>動画のアップスケーリング</value>
   </data>
+  <data name="ConfirmActivatingAdvancedSetting" xml:space="preserve">
+    <value>高度な項目を有効にするとアップスケーリングに干渉する場合があります。
+上級ユーザーのみ使用することをお勧めします。
+本当に有効にしますか?</value>
+  </data>
   <data name="ConfirmClose" xml:space="preserve">
     <value>現在、アップスケールされたフレームファイルが存在します。
 このままアプリケーションを終了すると、アップスケールされた

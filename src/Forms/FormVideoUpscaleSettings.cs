@@ -908,7 +908,7 @@ namespace NVGE
                     return;
                 }
 
-                DialogResult dr = MessageBox.Show("Activating advanced setting items may interfere with upscaling.\nIt is recommended that only advanced users use them.\nDo you really want to enable it?", Strings.MSGWarning, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dr = MessageBox.Show(Strings.ConfirmActivatingAdvancedSetting, Strings.MSGWarning, MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
                 {
                     button_FC.Enabled = true;
